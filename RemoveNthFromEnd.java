@@ -25,7 +25,9 @@ public class RemoveNthFromEnd {
             fast=fast.next;
         }
         ListNode temp=slow.next;
+        //Connecting slow with fast node
         slow.next=slow.next.next;
+        //breaking the link btwn slow and nth node
         temp.next=null;
         return dummy.next;
     }
